@@ -24,16 +24,6 @@ Install-Module posh-git -Scope CurrentUser -Force
 "[ ----------------------------------------------]"
 Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
 
-"[ --------------------------------------------------------------------------------]"
-"[ ============> Creamos la carpeta de powershell en la raiz de usuarios <=========]"
-"[ --------------------------------------------------------------------------------]"
-mkdir \.config\powershell
-
-"[ -------------------------------------------------------------------]"
-"[ ============> Creamo la carpeta PowerShell en documentos <=========]"
-"[ -------------------------------------------------------------------]"
-mkdir \Documents\PowerShell
-
 "[ ----------------------------------------------]"
 "[ ============> Instalamos Node <===============]"
 "[ ----------------------------------------------]"
@@ -71,3 +61,12 @@ Install-Module -Name PSFzf -Scope CurrentUser -Force
 "[ ----------------------------------------------]"
 scoop install bat
 
+# "[ --------------------------------------------------------------------------------]"
+# "[ ============> Creamos la carpeta de powershell en la raiz de usuarios <=========]"
+# "[ --------------------------------------------------------------------------------]"
+# mkdir \.config\powershell
+
+# "[ -------------------------------------------------------------------]"
+# "[ ============> Creamo la carpeta PowerShell en documentos <=========]"
+# "[ -------------------------------------------------------------------]"
+# mkdir \Documents\PowerShell
