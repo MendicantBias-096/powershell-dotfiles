@@ -59,7 +59,7 @@ Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -Skip
 "[ ----------------------------------------------]"
 "[ ============> Instalamos fzf <================]"
 "[ ----------------------------------------------]"
-scoop isntall fzf
+scoop install fzf
 
 "[ ------------------------------------------------]"
 "[ ============> Instalamos PSFzf <================]"
