@@ -1,3 +1,22 @@
+# Instalar git          (Manual)
+# Correr Maunalmente -> Install-Module posh-git -Scope CurrentUser -Force
+
+# Instalar gcc          (Manual)
+# Instalar VSCode       (Manual) 
+# Instalar Discord      (Manual) 
+# Instalar Notepad++    (Manual)
+# Instalar Notion       (Manual)
+
+# Instalar Navegadores  (Manual)
+# - Chrome
+# - Mozilla
+# - Brave
+
+# Instalar DBeaver      (Manual)
+# Instalar HeidiSQL     (Manual)
+# Instalar Zoom         (Manual)
+# Instalamos Docker     (Manual)
+
 "[ ----------------------------------------------]"
 "[ ==> Instalamos el Gestor de paquetes Scope <==]"
 "[ ----------------------------------------------]"
@@ -5,36 +24,20 @@ Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
 scoop install curl sudo jq
 
 "[ ----------------------------------------------]"
-"[ ============> Instalamos Git <================]"
-"[ ----------------------------------------------]"
-winget install -e --id Git.Git
-
-"[ ----------------------------------------------]"
 "[ ============> Instalamos NeoVim <=============]"
 "[ ----------------------------------------------]"
-scoop install neovim gcc
-
-"[ ----------------------------------------------]"
-"[ ============> Instalamos posh-git <===========]"
-"[ ----------------------------------------------]"
-Install-Module posh-git -Scope CurrentUser -Force
+scoop install neovim
 
 "[ ----------------------------------------------]"
 "[ ============> Instalamos Oh-my-posh <=========]"
 "[ ----------------------------------------------]"
 Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
 
-"[ ----------------------------------------------]"
-"[ ============> Instalamos Node <===============]"
-"[ ----------------------------------------------]"
-scoop install nvm
-
 "[ -------------------------------------------------------------]"
 "[ ============> Instalamos el modulo de Iconos <===============]"
 "[ -------------------------------------------------------------]"
 Install-Module -Name Terminal-Icons -Repository PSGallery -Force
 
-""
 "[ -----------------------------------------------------]"
 "[ ============> Instalamos z Directory <===============]"
 "[ -----------------------------------------------------]"
@@ -60,58 +63,3 @@ Install-Module -Name PSFzf -Scope CurrentUser -Force
 "[ ============> Instalamos bat <================]"
 "[ ----------------------------------------------]"
 scoop install bat
-
-"[ ----------------------------------------------]"
-"[ ============> Instalamos VSCode <=============]"
-"[ ----------------------------------------------]"
-winget install -e --id Microsoft.VisualStudioCode
-
-"[ -----------------------------------------------]"
-"[ ============> Instalamos Discord <=============]"
-"[ -----------------------------------------------]"
-winget install -e --id Discord.Discord
-
-"[ -----------------------------------------------]"
-"[ ============> Instalamos Dokcer desktop <======]"
-"[ -----------------------------------------------]"
-sudo winget install -e --id Docker.DockerDesktop
-
-"[ -----------------------------------------------]"
-"[ ============> Instalamos Notepad++ <===========]"
-"[ -----------------------------------------------]"
-winget install -e --id Notepad++.Notepad++
-
-"[ -----------------------------------------------]"
-"[ ============> Instalamos Notion <==============]"
-"[ -----------------------------------------------]"
-winget install -e --id Notion.Notion
-
-"[ -----------------------------------------------]"
-"[ ============> Instalamos Los Navegadores <=====]"
-"[ -----------------------------------------------]"
-
-winget install -e --id Google.Chrome
-winget install -e --id Mozilla.Firefox.ESR
-winget install -e --id BraveSoftware.BraveBrowser
-
-"[ -----------------------------------------------]"
-"[ ============> Instalamos DBeaver <=============]"
-"[ -----------------------------------------------]"
-
-winget install -e --id dbeaver.dbeaver
-
-"[ -----------------------------------------------]"
-"[ ============> Instalamos Zoom <================]"
-"[ -----------------------------------------------]"
-
-sudo winget install -e --id Zoom.Zoom
-
-# "[ --------------------------------------------------------------------------------]"
-# "[ ============> Creamos la carpeta de powershell en la raiz de usuarios <=========]"
-# "[ --------------------------------------------------------------------------------]"
-# mkdir \.config\powershell
-
-# "[ -------------------------------------------------------------------]"
-# "[ ============> Creamo la carpeta PowerShell en documentos <=========]"
-# "[ -------------------------------------------------------------------]"
-# mkdir \Documents\PowerShell
