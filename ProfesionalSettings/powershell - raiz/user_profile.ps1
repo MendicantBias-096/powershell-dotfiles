@@ -33,6 +33,6 @@ Set-Alias less "C:\Program Files\Git\usr\bin\less.exe"
 
 # Utilities
 function which($name) {
-    Get-Command -Name $command -ErrorAction SilentlyContinue |
+    Get-Command -Name $name -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
