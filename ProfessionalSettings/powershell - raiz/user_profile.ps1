@@ -8,7 +8,7 @@ Import-Module -Name Terminal-Icons
 Import-module posh-git
 
 # Load promopt config
-$omp_config = Join-Path $PSScriptRoot ".\am.omp.json"
+$omp_config = Join-Path $PSScriptRoot ".\professional-conf.omp.json"
 oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
 
 # PSReadLine

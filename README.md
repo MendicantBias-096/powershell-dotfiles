@@ -20,12 +20,12 @@ Configuración personal para Windows PowerShell con dos perfiles separados (`per
 │   └── powershell - raiz/
 │       ├── user_profile.ps1                   # Configuración real
 │       └── personal-conf.omp.json             # Tema oh-my-posh (sobrio)
-└── ProfesionalSettings/
+└── ProfessionalSettings/
     ├── PowerShell - Docs/
     │   └── Microsoft.PowerShell_profile.ps1
     └── powershell - raiz/
         ├── user_profile.ps1
-        └── am.omp.json                        # Tema oh-my-posh (más elaborado)
+        └── professional-conf.omp.json         # Tema oh-my-posh (más elaborado)
 ```
 
 ## Instalación

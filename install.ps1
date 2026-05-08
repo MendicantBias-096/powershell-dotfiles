@@ -48,8 +48,8 @@ if ($Profile -eq "personal") {
     $SrcDir    = Join-Path $RepoDir "PersonalSettings"
     $ThemeFile = "personal-conf.omp.json"
 } else {
-    $SrcDir    = Join-Path $RepoDir "ProfesionalSettings"
-    $ThemeFile = "am.omp.json"
+    $SrcDir    = Join-Path $RepoDir "ProfessionalSettings"
+    $ThemeFile = "professional-conf.omp.json"
 }
 
 $SrcRaiz = Join-Path $SrcDir "powershell - raiz"
