@@ -1,0 +1,23 @@
+# Backups generados por install.ps1 (idempotencia)
+*.pre-install-*
+*.bak
+*.bak.*
+
+# PowerShell artifacts
+*.ps1.bak
+
+# Editores
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs / temporales
+*.log
+*.tmp
