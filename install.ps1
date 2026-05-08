@@ -7,31 +7,35 @@
   y aplica uno de los dos perfiles (personal o professional) copiando los
   archivos a las rutas correctas.
 
-.PARAMETER Profile
+.PARAMETER ProfileName
   Perfil a aplicar. Valores aceptados: personal, professional.
   PARÁMETRO OBLIGATORIO — el script falla si no se proporciona.
 
-.EXAMPLE
-  .\install.ps1 -Profile personal
+  Nota: se usa `$ProfileName` (no `$Profile`) porque `$Profile` colisiona
+  con la variable automática de PowerShell que apunta al script de perfil
+  del usuario.
 
 .EXAMPLE
-  .\install.ps1 -Profile professional
+  .\install.ps1 -ProfileName personal
+
+.EXAMPLE
+  .\install.ps1 -ProfileName professional
 #>
 
 param(
-    [string]$Profile = ""
+    [string]$ProfileName = ""
 )
 
 $ErrorActionPreference = "Stop"
 
 # ─── Validación del parámetro ────────────────────────────────────
-if ($Profile -notin @("personal", "professional")) {
+if ($ProfileName -notin @("personal", "professional")) {
     Write-Host ""
     Write-Host "ERROR: Debes especificar el perfil." -ForegroundColor Red
     Write-Host ""
     Write-Host "Uso:" -ForegroundColor Yellow
-    Write-Host "  .\install.ps1 -Profile personal"
-    Write-Host "  .\install.ps1 -Profile professional"
+    Write-Host "  .\install.ps1 -ProfileName personal"
+    Write-Host "  .\install.ps1 -ProfileName professional"
     Write-Host ""
     exit 1
 }
@@ -44,7 +48,7 @@ function Warn ($msg)  { Write-Host "  $msg" -ForegroundColor Yellow }
 # ─── Mapear directorios fuente según el profile ──────────────────
 $RepoDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
-if ($Profile -eq "personal") {
+if ($ProfileName -eq "personal") {
     $SrcDir    = Join-Path $RepoDir "PersonalSettings"
     $ThemeFile = "personal-conf.omp.json"
 } else {
@@ -59,7 +63,7 @@ $SrcDocs = Join-Path $SrcDir "PowerShell - Docs"
 $ConfigDir = Join-Path $env:USERPROFILE ".config\PowerShell"
 $DocsPSDir = Join-Path $env:USERPROFILE "Documents\PowerShell"
 
-Cyan "→ Aplicando perfil: $Profile"
+Cyan "→ Aplicando perfil: $ProfileName"
 
 # ─── [1/6] SCOOP ─────────────────────────────────────────────────
 Cyan "→ [1/6] Verificando Scoop..."

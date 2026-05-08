@@ -13,7 +13,7 @@ Configuración personal para Windows PowerShell con dos perfiles separados (`per
 
 ```
 .
-├── install.ps1                       # Instalador idempotente — requiere -Profile
+├── install.ps1                       # Instalador idempotente — requiere -ProfileName
 ├── PersonalSettings/
 │   ├── PowerShell - Docs/
 │   │   └── Microsoft.PowerShell_profile.ps1   # Bootstrap (carga user_profile)
@@ -30,7 +30,7 @@ Configuración personal para Windows PowerShell con dos perfiles separados (`per
 
 ## Instalación
 
-**Importante**: el script requiere el parámetro `-Profile`. Si no lo proporcionas, falla con un mensaje de error. No hay default.
+**Importante**: el script requiere el parámetro `-ProfileName`. Si no lo proporcionas, falla con un mensaje de error. No hay default.
 
 ```powershell
 # Clonar el repo
@@ -38,10 +38,10 @@ git clone git@github.com:MendicantBias-096/powershell-dotfiles.git $env:USERPROF
 cd $env:USERPROFILE\dotfiles
 
 # Aplicar perfil personal
-.\install.ps1 -Profile personal
+.\install.ps1 -ProfileName personal
 
 # O aplicar perfil profesional
-.\install.ps1 -Profile professional
+.\install.ps1 -ProfileName professional
 ```
 
 El instalador:
@@ -70,7 +70,7 @@ Que carga `~/.config/PowerShell/user_profile.ps1` (la configuración real) — e
 Vuelve a correr el instalador con el otro flag:
 
 ```powershell
-.\install.ps1 -Profile professional
+.\install.ps1 -ProfileName professional
 ```
 
 El script reemplaza los archivos en `~/.config/PowerShell/` y `~/Documents/PowerShell/`.
